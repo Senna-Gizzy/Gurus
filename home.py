@@ -82,12 +82,12 @@ div[role="alert"] {
 
 /* Success alert with green background */
 div[role="alert"][aria-label="success"] {
-    background-color: #28a745cc !important;
+    background-color: #699c6d !important;
 }
 
 /* Error alert with red background */
 div[role="alert"][aria-label="error"] {
-    background-color: #dc3545cc !important;
+    background-color: #9c6969 !important;
 }
 </style>
 """, unsafe_allow_html=True)
