@@ -71,18 +71,22 @@ div[data-testid="stTextInput"] label {
     font-weight: 600;
 }
 
-/* Success / Error messages */
-div.stAlert.success {
-    background-color: #28a745 !important;
+/* Success alert */
+div[data-testid="stAlert"][role="alert"] > div[aria-label="success"] {
+    background-color: #28a745 !important; /* darker green */
     color: white !important;
     border-radius: 8px;
     padding: 10px;
+    font-weight: 600;
 }
-div.stAlert.error {
-    background-color: #dc3545 !important;
+
+/* Error alert */
+div[data-testid="stAlert"][role="alert"] > div[aria-label="error"] {
+    background-color: #dc3545 !important; /* darker red */
     color: white !important;
     border-radius: 8px;
     padding: 10px;
+    font-weight: 600;
 }
 </style>
 """, unsafe_allow_html=True)
