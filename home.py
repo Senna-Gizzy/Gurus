@@ -1,20 +1,19 @@
 import streamlit as st
 # ______________________________________________________________________________
 # Page Style
+
+# darkbrown: #654f41
+# lightbrown: #c29e8e
+# blueisch: #649999
+
+
 st.markdown("""
 <style>
-# /* Background color */
-# .stApp {
-#     background-color: #654f41;
-# }
+/* Background color */
 .stApp {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-JITxDC9GQ1ViKV-Pgb9Wrs7ZjCboghcRrg&s');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;  /* Makes sure the background covers the whole page */
-    color: white;   /* Optional: changes text color to white for better contrast */
+    background-color: #649999;
 }
+
 /* Title styling */
 h1 {
     text-align: center;
@@ -26,7 +25,7 @@ h1 {
 
 /* Buttons */
 .stButton > button {
-    background-color: #c29e8e;
+    background-color: #654f41;
     color: white;
     border-radius: 12px;
     height: 48px;
@@ -38,7 +37,7 @@ h1 {
 
 /* Hover effect */
 .stButton > button:hover {
-    background-color: #649999;
+    background-color: #c29e8e;
     transform: translateY(-2px);
 }
 
@@ -47,7 +46,7 @@ h1 {
     display: block !important;
     width: 100% !important;
     text-align: center !important;
-    background-color: #c29e8e !important;
+    background-color: #654f41 !important;
     color: white !important;
     border-radius: 12px;
     padding: 14px 16px;
@@ -57,7 +56,7 @@ h1 {
 
 /* Link button hover */
 .stLinkButton a:hover {
-    background-color: #649999 !important;
+    background-color: #c29e8e !important;
     transform: translateY(-2px);
 }
 
