@@ -10,7 +10,7 @@ st.markdown("""
 
 /* Title styling */
 h1 {
-    text-align: left;
+    text-align: center;
     color: white !important;
     font-weight: 700;
 }
