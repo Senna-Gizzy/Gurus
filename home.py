@@ -13,6 +13,8 @@ h1 {
     text-align: center;
     color: white !important;
     font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 /* Buttons */
@@ -21,6 +23,7 @@ h1 {
     color: white;
     border-radius: 12px;
     height: 48px;
+    width: 100%;
     border: none;
     font-weight: 600;
     transition: all 0.2s ease;
@@ -34,10 +37,13 @@ h1 {
 
 /* Link buttons */
 .stLinkButton a {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
     background-color: #c29e8e !important;
     color: white !important;
     border-radius: 12px;
-    padding: 10px 16px;
+    padding: 14px 16px;
     font-weight: 600;
     transition: all 0.2s ease;
 }
@@ -90,49 +96,27 @@ div[role="alert"][aria-label="error"] {
     background-color: #9c6969 !important;
 }
 
-/* Button styling */
-.stButton > button {
-    width: 100% !important;
-    height: 52px;
-}
-
-.stLinkButton {
-    width: 100% !important;
-}
-
-.stLinkButton a {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-}
-
-/* Header Styling */
+/* Center images inside container */
 [data-testid="stImage"] {
-    text-align: center;
-}
-
-[data-testid="stImage"] img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
+
 </style>
 """, unsafe_allow_html=True)
 
-# _________________________________________________________________________________________________________
-# Header
-# left, center, right = st.columns([1,2,1])
+# Header (centered)
+left, center, right = st.columns([1, 2, 1])
 
-# with center:
-#     st.image(
-#         "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
-#         width=200
-#     )
-    
+with center:
+    st.image(
+        "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
+        width=200
+    )
 
-# _________________________________________________________________________________________________________
-# Main
-
+# Main Content
 CORRECT_PASSWORD = st.secrets["guru_password"]
 
 sheet_link_data = "https://docs.google.com/spreadsheets/d/1Lf9Rs121pEpCPjAhEC7pk00ffvmOim51vLmrUePJP5A/edit#gid=0"
@@ -141,30 +125,22 @@ sheet_link_edit = "https://docs.google.com/spreadsheets/d/10kSJ04j7sNsXuXEinq5sV
 if "login_clicked" not in st.session_state:
     st.session_state.login_clicked = False
 
-
-left, center, right = st.columns([1,2,1])
-
+# Centered layout for the buttons and input fields
+left, center, right = st.columns([1, 2, 1])
 
 with center:
-    st.image(
-    "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
-    width=200)
-    st.write("")
     st.title("Agga Guru's")
 
     st.link_button(
-    "Spel Opmerking Toevoegen",
-    sheet_link_edit,
-    use_container_width=True)
-    
+        "Spel Opmerking Toevoegen",
+        sheet_link_edit,
+        use_container_width=True
+    )
+
     if st.button("Naar Game Library", use_container_width=True):
         st.session_state.login_clicked = True
 
-    st.write("")
-
-
     if st.session_state.login_clicked:
-
         password = st.text_input("Wachtwoord", type="password")
 
         if st.button("Login"):
@@ -173,14 +149,3 @@ with center:
                 st.link_button("Open Game Library", sheet_link_data)
             else:
                 st.error("Verkeerd wachtwoord")
-
-
-# if st.session_state.login_clicked:
-#     password = st.text_input("Wachtwoord", type="password")
-
-#     if st.button("Login"):
-#         if password == CORRECT_PASSWORD:
-#             st.success("Toegang toegestaan, klik hieronder om de Game Library te openen.")
-#             st.link_button("Open Game Library", sheet_link_data)
-#         else:
-#             st.error("Verkeerd wachtwoord")
