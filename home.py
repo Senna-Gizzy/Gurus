@@ -88,7 +88,7 @@ h1 {
 # Header
 st.image(
     "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
-    width = 600
+    width = 300
 )
 
 # _________________________________________________________________________________________________________
