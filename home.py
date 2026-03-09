@@ -3,37 +3,21 @@ import streamlit as st
 # Page Style
 st.markdown("""
 <style>
-
-/* Background image */
+/* Background color */
 .stApp {
-    background-image: url("https://www.spellenhuis.nl/media/da/72/c3/1732609509/Welkspelmoetikkiezen.webp");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* Dark overlay for readability */
-.stApp::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(10,15,25,0.85);
-    z-index: -1;
+    background-color: #654f41;
 }
 
 /* Title styling */
 h1 {
     text-align: center;
-    color: white;
+    color: white !important;
     font-weight: 700;
 }
 
 /* Buttons */
 .stButton > button {
-    background-color: #649999;
+    background-color: #1f6feb;
     color: white;
     border-radius: 12px;
     height: 48px;
@@ -50,7 +34,7 @@ h1 {
 
 /* Link buttons */
 .stLinkButton a {
-    background-color: #649999 !important;
+    background-color: #1f6feb !important;
     color: white !important;
     border-radius: 12px;
     padding: 10px 16px;
@@ -69,17 +53,6 @@ h1 {
     background-color: rgba(20,20,30,0.75);
     padding: 25px;
     border-radius: 15px;
-}
-
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<style>
-h1 {
-    color: white !important;
-    text-align: center;
-    font-weight: 800;
 }
 </style>
 """, unsafe_allow_html=True)
