@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
 st.title("Guru's Only")
 
@@ -27,20 +26,17 @@ with col2:
 
 
 if st.session_state.login_clicked:
-    password = st.text_input("Wachtwoord", type="password")
+    with st.form("login_form"):
+        password = st.text_input("Wachtwoord", type="password")
+        submitted = st.form_submit_button("Login")
 
-    if st.button("Login"):
+    if submitted:
         if password == CORRECT_PASSWORD:
-            st.success("Opening Gamelibrary...")
-
-            components.html(
-                f"""
-                <script>
-                    window.open("{sheet_link_data}", "_blank");
-                </script>
-                """,
-                height=0,
-            )
-
+            st.success("Klik hieronder om de Gamelibrary te openen")
+            st.markdown(f"""
+            <a href="{sheet_link_data}" target="_blank">
+                <button style="padding:10px 20px; font-size:16px;">Open Gamelibrary</button>
+            </a>
+            """, unsafe_allow_html=True)
         else:
             st.error("Verkeerd wachtwoord")
