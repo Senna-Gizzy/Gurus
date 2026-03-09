@@ -7,7 +7,7 @@ CORRECT_PASSWORD = st.secrets["guru_password"]
 sheet_link_data = "https://docs.google.com/spreadsheets/d/1Lf9Rs121pEpCPjAhEC7pk00ffvmOim51vLmrUePJP5A/edit#gid=0"
 sheet_link_edit = "https://docs.google.com/spreadsheets/d/10kSJ04j7sNsXuXEinq5sVI_ToM13g8RroU0lSbmic0Y/edit?gid=0#gid=0"
 
-# Session state defaults
+# Session state
 if "login_clicked" not in st.session_state:
     st.session_state.login_clicked = False
 
@@ -26,16 +26,20 @@ with col2:
     """, unsafe_allow_html=True)
 
 
-# Show password only after clicking the button
+# Show password after clicking
 if st.session_state.login_clicked:
     password = st.text_input("Wachtwoord", type="password")
 
     if st.button("Login"):
         if password == CORRECT_PASSWORD:
-            st.success("Doorsturen naar Gamelibrary...")
+            st.success("Opening Gamelibrary...")
 
             st.markdown(
-                f'<meta http-equiv="refresh" content="0; url={sheet_link_data}">',
+                f"""
+                <script>
+                window.open("{sheet_link_data}", "_blank");
+                </script>
+                """,
                 unsafe_allow_html=True
             )
 
