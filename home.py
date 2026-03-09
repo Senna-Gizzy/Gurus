@@ -90,6 +90,7 @@ div[role="alert"][aria-label="error"] {
     background-color: #9c6969 !important;
 }
 
+/* Button styling */
 .stButton > button {
     width: 100% !important;
     height: 52px;
@@ -103,6 +104,17 @@ div[role="alert"][aria-label="error"] {
     display: block !important;
     width: 100% !important;
     text-align: center !important;
+}
+
+/* Header Styling */
+[data-testid="stImage"] {
+    text-align: center;
+}
+
+[data-testid="stImage"] img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -121,10 +133,6 @@ with center:
 # _________________________________________________________________________________________________________
 # Main
 
-# st.write("")
-# st.write("")
-# #st.title("Guru's Only")
-
 CORRECT_PASSWORD = st.secrets["guru_password"]
 
 sheet_link_data = "https://docs.google.com/spreadsheets/d/1Lf9Rs121pEpCPjAhEC7pk00ffvmOim51vLmrUePJP5A/edit#gid=0"
@@ -139,7 +147,7 @@ left, center, right = st.columns([1,2,1])
 
 with center:
     st.write("")
-    st.title("Guru's Den Haag")
+    st.title("Agga Guru's")
 
     st.link_button(
     "Spel Opmerking Toevoegen",
