@@ -61,15 +61,28 @@ h1 {
 
 /* Password field styling */
 div[data-testid="stTextInput"] input {
-    color: white !important;
+    color: black !important;  /* typed text black */
     background-color: rgba(255,255,255,0.1) !important;
     border-radius: 8px;
     border: 1px solid #ccc;
 }
-
 div[data-testid="stTextInput"] label {
-    color: white !important;
+    color: white !important;  /* label white */
     font-weight: 600;
+}
+
+/* Success / Error messages */
+div.stAlert.success {
+    background-color: #28a745 !important;
+    color: white !important;
+    border-radius: 8px;
+    padding: 10px;
+}
+div.stAlert.error {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border-radius: 8px;
+    padding: 10px;
 }
 </style>
 """, unsafe_allow_html=True)
