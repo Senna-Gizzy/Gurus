@@ -121,6 +121,9 @@ with center:
     # Logo
     st.image("https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png", width=200)
     
+    # Add a small gap after the image to ensure proper alignment
+    st.write("")  # add some vertical space
+    
     # Title
     st.title("Agga Guru's")
 
