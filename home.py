@@ -73,7 +73,7 @@ div[data-testid="stTextInput"] label {
 
 /* Success alert */
 div[data-testid="stAlert"][role="alert"] > div[aria-label="success"] {
-    background-color: #28a745cc !important;
+    background-color: #c29e8e !important;
     color: #ffffff !important;
     border-radius: 8px;
     padding: 10px;
@@ -83,7 +83,7 @@ div[data-testid="stAlert"][role="alert"] > div[aria-label="success"] {
 
 /* Error alert */
 div[data-testid="stAlert"][role="alert"] > div[aria-label="error"] {
-    background-color: #dc3545cc !important;
+    background-color: #c29e8e !important;
     color: #ffffff !important;
     border-radius: 8px;
     padding: 10px;
