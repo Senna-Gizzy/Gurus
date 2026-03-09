@@ -13,11 +13,11 @@ if "login_clicked" not in st.session_state:
 
 col1, col2, col3 = st.columns(3)
 
-with col1:
+with col2:
     if st.button("Naar Game Library"):
         st.session_state.login_clicked = True
 
-with col2:
+with col1:
     st.link_button("Spel Opmerking Toevoegen", sheet_link_edit)
 
 
