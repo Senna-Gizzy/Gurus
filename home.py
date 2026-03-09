@@ -1,5 +1,5 @@
 import streamlit as st
-#________________________________________________________________________________________________
+
 # Page Style
 st.markdown("""
 <style>
@@ -97,24 +97,25 @@ div[role="alert"][aria-label="error"] {
 }
 
 /* Center images inside container */
+.stContainer {
+    display: flex;
+    justify-content: center;
+}
+
 [data-testid="stImage"] {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
-
 </style>
 """, unsafe_allow_html=True)
 
 # Header (centered)
-left, center, right = st.columns([1, 2, 1])
+st.container()
 
-with center:
-    st.image(
-        "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
-        width=200
-    )
+# Ensure the logo is in the center
+st.image("https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png", width=200)
 
 # Main Content
 CORRECT_PASSWORD = st.secrets["guru_password"]
@@ -131,14 +132,12 @@ left, center, right = st.columns([1, 2, 1])
 with center:
     st.title("Agga Guru's")
 
-    st.link_button(
-        "Spel Opmerking Toevoegen",
-        sheet_link_edit,
-        use_container_width=True
-    )
+    st.link_button("Spel Opmerking Toevoegen", sheet_link_edit, use_container_width=True)
 
     if st.button("Naar Game Library", use_container_width=True):
         st.session_state.login_clicked = True
+
+    st.write("")  # spacing
 
     if st.session_state.login_clicked:
         password = st.text_input("Wachtwoord", type="password")
