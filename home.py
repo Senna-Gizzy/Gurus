@@ -1,38 +1,31 @@
 import streamlit as st
 import pandas as pd
 
-# Load your data (adjust filename!)
-df = pd.read_csv("Spellenhuis Bordspellen Library - Library.csv")
+st.title("Guru's Only")
 
-st.title("🎲 Boardgame Filter")
+CORRECT_PASSWORD = st.secrets["guru_password"]
 
-min_player = st.text_input("Min Players")
-max_player = st.text_input("Max Players")
-language = st.text_input("Language")
-game_type = st.text_input("Game Type")
 
-if st.button("Filter Games"):
+password = st.text_input("Wachtwoord", type="password")
+if st.button("Login"):
+    if password == CORRECT_PASSWORD:
+        st.session_state.authenticated = True
+        sheet_link_data = "https://docs.google.com/spreadsheets/d/1Lf9Rs121pEpCPjAhEC7pk00ffvmOim51vLmrUePJP5A/edit#gid=0"
+        sheet_link_edit = "https://docs.google.com/spreadsheets/d/10kSJ04j7sNsXuXEinq5sVI_ToM13g8RroU0lSbmic0Y/edit?gid=0#gid=0"
+        st.markdown(f"""
+        <a href="{sheet_link_data}" target="_blank">
+            <button style="padding:10px 20px; font-size:14px;">Naar Gamelibrary</button>
+        </a>
+        """, unsafe_allow_html=True)
 
-    min_player = int(min_player) if min_player else None
-    max_player = int(max_player) if max_player else None
-    language = language if language else None
-    game_type = game_type if game_type else None
+        <a href="{sheet_link_data}" target="_blank">
+            <button style="padding:10px 20px; font-size:14px;">Spelopmerking Toevoegen</button>
+        </a>
+        """, unsafe_allow_html=True)
 
-    filtered = df.copy()
-
-    if min_player is not None:
-        filtered = filtered[filtered['Min. Players'] == min_player]
-
-    if max_player is not None:
-        filtered = filtered[filtered['Max. Players'] == max_player]
-
-    if language is not None:
-        filtered = filtered[filtered['Language'] == language]
-
-    if game_type is not None:
-        filtered = filtered[filtered['Type'] == game_type]
-
-    if filtered.empty:
-        st.warning("No game can be found")
+        st.divider()
     else:
-        st.write(filtered['Boardgame'])
+        st.error("Verkeerd wachtwoord")
+
+# Stop at the end to prevent the app from executing further
+st.stop()
