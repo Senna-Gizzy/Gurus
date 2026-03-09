@@ -99,7 +99,7 @@ div[role="alert"][aria-label="success"] {
 
 /* Error alert with red background */
 div[role="alert"][aria-label="error"] {
-    background-color: #d66d6d !important;
+    background-color: #db3131 !important;
 }
 
 /* Center images inside container */
