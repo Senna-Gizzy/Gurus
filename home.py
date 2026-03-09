@@ -77,7 +77,7 @@ h1 {
 # _________________________________________________________________________________________________________
 # Header
 st.image(
-    "https://www.spellenhuis.nl/media/da/72/c3/1732609509/Welkspelmoetikkiezen.webp",
+    "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
     use_container_width=True
 )
 
