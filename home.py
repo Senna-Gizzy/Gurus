@@ -18,11 +18,12 @@ if st.button("Login"):
         </a>
         """, unsafe_allow_html=True)
 
-        <a href="{sheet_link_data}" target="_blank">
-            <button style="padding:10px 20px; font-size:14px;">Spelopmerking Toevoegen</button>
+        st.markdown(f"""
+        <a href="{sheet_link_edit}" target="_blank">
+            <button style="padding:10px 20px; font-size:14px;">Spel Opmerking Toevoegen</button>
         </a>
         """, unsafe_allow_html=True)
-
+        
         st.divider()
     else:
         st.error("Verkeerd wachtwoord")
