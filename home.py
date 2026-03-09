@@ -17,7 +17,7 @@ h1 {
 
 /* Buttons */
 .stButton > button {
-    background-color: #1f6feb;
+    background-color: #649999;
     color: white;
     border-radius: 12px;
     height: 48px;
@@ -34,7 +34,7 @@ h1 {
 
 /* Link buttons */
 .stLinkButton a {
-    background-color: #1f6feb !important;
+    background-color: #649999 !important;
     color: white !important;
     border-radius: 12px;
     padding: 10px 16px;
