@@ -94,12 +94,12 @@ div[role="alert"] {
 
 /* Success alert with green background */
 div[role="alert"][aria-label="success"] {
-    background-color: #699c6d !important;
+    background-color: #8fc28e !important;
 }
 
 /* Error alert with red background */
 div[role="alert"][aria-label="error"] {
-    background-color: #9c6969 !important;
+    background-color: #d66d6d !important;
 }
 
 /* Center images inside container */
@@ -156,6 +156,6 @@ with center:
         if st.button("Login"):
             if password == CORRECT_PASSWORD:
                 st.success("Toegang toegestaan, klik hieronder om de Game Library te openen.")
-                st.link_button("Open Game Library", sheet_link_data)
+                st.link_button("Open Game Library", sheet_link_data, use_container_width=True)
             else:
                 st.error("Verkeerd wachtwoord")
