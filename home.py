@@ -91,25 +91,18 @@ div[role="alert"][aria-label="error"] {
 }
 
 .stButton > button {
-    background-color: #c29e8e;
-    color: white;
-    border-radius: 12px;
+    width: 100% !important;
     height: 52px;
-    width: 100%;
-    border: none;
-    font-weight: 600;
-    transition: all 0.2s ease;
+}
+
+.stLinkButton {
+    width: 100% !important;
 }
 
 .stLinkButton a {
     display: block !important;
     width: 100% !important;
     text-align: center !important;
-    background-color: #c29e8e !important;
-    color: white !important;
-    border-radius: 12px;
-    padding: 14px 16px;
-    font-weight: 600;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -143,16 +136,21 @@ if "login_clicked" not in st.session_state:
 
 left, center, right = st.columns([1,2,1])
 
+
 with center:
 
     st.title("Guru's Only")
 
-    if st.button("Naar Game Library"):
+    st.link_button(
+    "Spel Opmerking Toevoegen",
+    sheet_link_edit,
+    use_container_width=True)
+    
+    if st.button("Naar Game Library", use_container_width=True):
         st.session_state.login_clicked = True
 
-    st.write("")  # spacing
+    st.write("")
 
-    st.link_button("Spel Opmerking Toevoegen", sheet_link_edit)
 
     if st.session_state.login_clicked:
 
