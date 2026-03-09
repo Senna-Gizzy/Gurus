@@ -28,7 +28,7 @@ h1 {
 
 /* Hover effect */
 .stButton > button:hover {
-    background-color: #388bfd;
+    background-color: #c29e8e;
     transform: translateY(-2px);
 }
 
@@ -44,15 +44,32 @@ h1 {
 
 /* Link button hover */
 .stLinkButton a:hover {
-    background-color: #388bfd !important;
+    background-color: #c29e8e !important;
     transform: translateY(-2px);
 }
 
-/* Login container */
-[data-testid="stContainer"] {
-    background-color: rgba(20,20,30,0.75);
+/* Login card container */
+.login-card {
+    background-color: rgba(20,20,30,0.85);
     padding: 25px;
-    border-radius: 15px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* Password field styling */
+div[data-testid="stTextInput"] input {
+    color: white !important;
+    background-color: rgba(255,255,255,0.1) !important;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+div[data-testid="stTextInput"] label {
+    color: white !important;
+    font-weight: 600;
 }
 </style>
 """, unsafe_allow_html=True)
