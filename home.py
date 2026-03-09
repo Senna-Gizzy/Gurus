@@ -79,17 +79,21 @@ st.markdown("""
 h1 {
     color: white !important;
     text-align: center;
-    font-weight: 700;
+    font-weight: 800;
 }
 </style>
 """, unsafe_allow_html=True)
 
 # _________________________________________________________________________________________________________
 # Header
-st.image(
-    "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
-    width = 300
-)
+col1, col2, col3 = st.columns([1, 2, 1])
+
+with col2:
+    st.image(
+        "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
+        width=200
+    )
+    
 
 # _________________________________________________________________________________________________________
 # Main
