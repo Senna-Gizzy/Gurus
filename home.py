@@ -100,45 +100,51 @@ div[role="alert"][aria-label="error"] {
 .stContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 [data-testid="stImage"] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
 }
 </style>
 """, unsafe_allow_html=True)
 
-# Header (centered)
-st.container()
+# _________________________________________________________________________________________________________
+# Header and Main Content Centering
 
-# Ensure the logo is in the center
-st.image("https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png", width=200)
-
-# Main Content
-CORRECT_PASSWORD = st.secrets["guru_password"]
-
-sheet_link_data = "https://docs.google.com/spreadsheets/d/1Lf9Rs121pEpCPjAhEC7pk00ffvmOim51vLmrUePJP5A/edit#gid=0"
-sheet_link_edit = "https://docs.google.com/spreadsheets/d/10kSJ04j7sNsXuXEinq5sVI_ToM13g8RroU0lSbmic0Y/edit?gid=0#gid=0"
-
-if "login_clicked" not in st.session_state:
-    st.session_state.login_clicked = False
-
-# Centered layout for the buttons and input fields
+# Center everything (logo, title, buttons) in one column layout
 left, center, right = st.columns([1, 2, 1])
 
 with center:
+    # Logo
+    st.image("https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png", width=200)
+    
+    # Title
     st.title("Agga Guru's")
 
+    # Buttons
+    CORRECT_PASSWORD = st.secrets["guru_password"]
+    sheet_link_data = "https://docs.google.com/spreadsheets/d/1Lf9Rs121pEpCPjAhEC7pk00ffvmOim51vLmrUePJP5A/edit#gid=0"
+    sheet_link_edit = "https://docs.google.com/spreadsheets/d/10kSJ04j7sNsXuXEinq5sVI_ToM13g8RroU0lSbmic0Y/edit?gid=0#gid=0"
+
+    if "login_clicked" not in st.session_state:
+        st.session_state.login_clicked = False
+
+    # Spacing
+    st.write("") 
+
+    # Spel Opmerking Button
     st.link_button("Spel Opmerking Toevoegen", sheet_link_edit, use_container_width=True)
 
+    # Game Library Button
     if st.button("Naar Game Library", use_container_width=True):
         st.session_state.login_clicked = True
 
-    st.write("")  # spacing
+    st.write("")  # Additional spacing
 
+    # Password input
     if st.session_state.login_clicked:
         password = st.text_input("Wachtwoord", type="password")
 
