@@ -26,7 +26,7 @@ if st.session_state.login_clicked:
 
     if st.button("Login"):
         if password == CORRECT_PASSWORD:
-            st.success("Toegang toegestaan")
+            st.success("Toegang toegestaan, klik hieronder om de Game Library te openen.")
             st.link_button("Open Game Library", sheet_link_data)
         else:
             st.error("Verkeerd wachtwoord")
