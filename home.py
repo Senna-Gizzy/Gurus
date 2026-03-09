@@ -1,4 +1,88 @@
 import streamlit as st
+#________________________________________________________________________________________________
+# Page Style
+st.markdown("""
+<style>
+
+/* Background image */
+.stApp {
+    background-image: url("https://www.spellenhuis.nl/media/da/72/c3/1732609509/Welkspelmoetikkiezen.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Dark overlay for readability */
+.stApp::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10,15,25,0.85);
+    z-index: -1;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: #649999;
+    color: white;
+    border-radius: 12px;
+    height: 48px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.stButton > button:hover {
+    background-color: #388bfd;
+    transform: translateY(-2px);
+}
+
+/* Link buttons */
+.stLinkButton a {
+    background-color: #649999 !important;
+    color: white !important;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* Link button hover */
+.stLinkButton a:hover {
+    background-color: #388bfd !important;
+    transform: translateY(-2px);
+}
+
+/* Login container */
+[data-testid="stContainer"] {
+    background-color: rgba(20,20,30,0.75);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+# _________________________________________________________________________________________________________
+# Header
+st.image(
+    "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5",
+    use_container_width=True
+)
+
+# _________________________________________________________________________________________________________
+# Main
 
 st.title("Guru's Only")
 
