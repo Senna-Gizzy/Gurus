@@ -14,29 +14,19 @@ if "login_clicked" not in st.session_state:
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("Naar Gamelibrary"):
+    if st.button("Naar Game Library"):
         st.session_state.login_clicked = True
 
 with col2:
-    st.markdown(f"""
-    <a href="{sheet_link_edit}" target="_blank">
-        <button style="padding:10px 20px; font-size:14px;">Spel Opmerking Toevoegen</button>
-    </a>
-    """, unsafe_allow_html=True)
+    st.link_button("Spel Opmerking Toevoegen", sheet_link_edit)
 
 
 if st.session_state.login_clicked:
-    with st.form("login_form"):
-        password = st.text_input("Wachtwoord", type="password")
-        submitted = st.form_submit_button("Login")
+    password = st.text_input("Wachtwoord", type="password")
 
-    if submitted:
+    if st.button("Login"):
         if password == CORRECT_PASSWORD:
-            st.success("Klik hieronder om de Gamelibrary te openen")
-            st.markdown(f"""
-            <a href="{sheet_link_data}" target="_blank">
-                <button style="padding:10px 20px; font-size:16px;">Open Gamelibrary</button>
-            </a>
-            """, unsafe_allow_html=True)
+            st.success("Toegang toegestaan")
+            st.link_button("Open Game Library", sheet_link_data)
         else:
             st.error("Verkeerd wachtwoord")
