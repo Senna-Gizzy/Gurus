@@ -117,7 +117,8 @@ div[role="alert"][aria-label="error"] {
 left, center, right = st.columns([1, 2, 1])
 
 with center:
-    st.image("https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png", width=100)
+    st.image("https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png", use_column_width=True)
+ 
     
     st.write("")  # add some vertical space
     st.write("")
