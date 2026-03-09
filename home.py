@@ -89,6 +89,28 @@ div[role="alert"][aria-label="success"] {
 div[role="alert"][aria-label="error"] {
     background-color: #9c6969 !important;
 }
+
+.stButton > button {
+    background-color: #c29e8e;
+    color: white;
+    border-radius: 12px;
+    height: 52px;
+    width: 100%;
+    border: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.stLinkButton a {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    background-color: #c29e8e !important;
+    color: white !important;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-weight: 600;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -106,7 +128,9 @@ with col2:
 # _________________________________________________________________________________________________________
 # Main
 
-st.title("Guru's Only")
+st.write("")
+st.write("")
+#st.title("Guru's Only")
 
 CORRECT_PASSWORD = st.secrets["guru_password"]
 
@@ -117,22 +141,37 @@ if "login_clicked" not in st.session_state:
     st.session_state.login_clicked = False
 
 
-col1, col2, col3 = st.columns(3)
+left, center, right = st.columns([1,2,1])
 
-with col2:
+with center:
+
+    st.title("Guru's Only")
+
     if st.button("Naar Game Library"):
         st.session_state.login_clicked = True
 
-with col1:
+    st.write("")  # spacing
+
     st.link_button("Spel Opmerking Toevoegen", sheet_link_edit)
 
+    if st.session_state.login_clicked:
 
-if st.session_state.login_clicked:
-    password = st.text_input("Wachtwoord", type="password")
+        password = st.text_input("Wachtwoord", type="password")
 
-    if st.button("Login"):
-        if password == CORRECT_PASSWORD:
-            st.success("Toegang toegestaan, klik hieronder om de Game Library te openen.")
-            st.link_button("Open Game Library", sheet_link_data)
-        else:
-            st.error("Verkeerd wachtwoord")
+        if st.button("Login"):
+            if password == CORRECT_PASSWORD:
+                st.success("Toegang toegestaan, klik hieronder om de Game Library te openen.")
+                st.link_button("Open Game Library", sheet_link_data)
+            else:
+                st.error("Verkeerd wachtwoord")
+
+
+# if st.session_state.login_clicked:
+#     password = st.text_input("Wachtwoord", type="password")
+
+#     if st.button("Login"):
+#         if password == CORRECT_PASSWORD:
+#             st.success("Toegang toegestaan, klik hieronder om de Game Library te openen.")
+#             st.link_button("Open Game Library", sheet_link_data)
+#         else:
+#             st.error("Verkeerd wachtwoord")
