@@ -74,11 +74,21 @@ h1 {
 </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<style>
+h1 {
+    color: white !important;
+    text-align: center;
+    font-weight: 700;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # _________________________________________________________________________________________________________
 # Header
 st.image(
     "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
-    use_container_width=True
+    width = 600
 )
 
 # _________________________________________________________________________________________________________
