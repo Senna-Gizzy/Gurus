@@ -71,24 +71,23 @@ div[data-testid="stTextInput"] label {
     font-weight: 600;
 }
 
-/* Success alert */
-div[data-testid="stAlert"][role="alert"] > div[aria-label="success"] {
-    background-color: #c29e8e !important;
-    color: #ffffff !important;
-    border-radius: 8px;
-    padding: 10px;
-    font-weight: 700;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+/* Target all alert boxes */
+div[role="alert"] {
+    border-radius: 8px !important;
+    padding: 12px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+    color: #fff !important;
 }
 
-/* Error alert */
-div[data-testid="stAlert"][role="alert"] > div[aria-label="error"] {
-    background-color: #c29e8e !important;
-    color: #ffffff !important;
-    border-radius: 8px;
-    padding: 10px;
-    font-weight: 700;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+/* Success alert with green background */
+div[role="alert"][aria-label="success"] {
+    background-color: #28a745cc !important;
+}
+
+/* Error alert with red background */
+div[role="alert"][aria-label="error"] {
+    background-color: #dc3545cc !important;
 }
 </style>
 """, unsafe_allow_html=True)
