@@ -23,42 +23,69 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Buttons */
-.stButton > button {
-    background-color: #c29e8e;
-    color: white;
-    border-radius: 12px;
-    height: 48px;
-    width: 100%;
-    border: none;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-/* Hover effect */
+/* Hover effect for buttons */
 .stButton > button:hover {
-    background-color: #654f41;
-    transform: translateY(-2px);
+    background-color: #388585;  /* Lighter teal when hovered */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
-/* Link buttons */
+/* Link button styling */
 .stLinkButton a {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    background-color: #c29e8e !important;
+    background-color: #4F8A8B !important;
     color: white !important;
-    border-radius: 12px;
-    padding: 14px 16px;
-    font-weight: 600;
-    transition: all 0.2s ease;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-/* Link button hover */
+/* Hover effect for link buttons */
 .stLinkButton a:hover {
-    background-color: #654f41 !important;
+    background-color: #388585 !important;
     transform: translateY(-2px);
-}
+# }
+# /* Buttons */
+# .stButton > button {
+#     background-color: #c29e8e;
+#     color: white;
+#     border-radius: 12px;
+#     height: 48px;
+#     width: 100%;
+#     border: none;
+#     font-weight: 600;
+#     transition: all 0.2s ease;
+# }
+
+# /* Hover effect */
+# .stButton > button:hover {
+#     background-color: #654f41;
+#     transform: translateY(-2px);
+# }
+
+# /* Link buttons */
+# .stLinkButton a {
+#     display: block !important;
+#     width: 100% !important;
+#     text-align: center !important;
+#     background-color: #c29e8e !important;
+#     color: white !important;
+#     border-radius: 12px;
+#     padding: 14px 16px;
+#     font-weight: 600;
+#     transition: all 0.2s ease;
+# }
+
+# /* Link button hover */
+# .stLinkButton a:hover {
+#     background-color: #654f41 !important;
+#     transform: translateY(-2px);
+# }
 
 /* Login card container */
 .login-card {
