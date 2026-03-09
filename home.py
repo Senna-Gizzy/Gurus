@@ -25,7 +25,7 @@ h1 {
 
 /* Buttons */
 .stButton > button {
-    background-color: #654f41;
+    background-color: #c29e8e;
     color: white;
     border-radius: 12px;
     height: 48px;
@@ -37,7 +37,7 @@ h1 {
 
 /* Hover effect */
 .stButton > button:hover {
-    background-color: #c29e8e;
+    background-color: #654f41;
     transform: translateY(-2px);
 }
 
@@ -46,7 +46,7 @@ h1 {
     display: block !important;
     width: 100% !important;
     text-align: center !important;
-    background-color: #654f41 !important;
+    background-color: #c29e8e !important;
     color: white !important;
     border-radius: 12px;
     padding: 14px 16px;
@@ -56,7 +56,7 @@ h1 {
 
 /* Link button hover */
 .stLinkButton a:hover {
-    background-color: #c29e8e !important;
+    background-color: #654f41 !important;
     transform: translateY(-2px);
 }
 
