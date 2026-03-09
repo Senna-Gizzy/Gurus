@@ -3,11 +3,18 @@ import streamlit as st
 # Page Style
 st.markdown("""
 <style>
-/* Background color */
+# /* Background color */
+# .stApp {
+#     background-color: #654f41;
+# }
 .stApp {
-    background-color: #654f41;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-JITxDC9GQ1ViKV-Pgb9Wrs7ZjCboghcRrg&s');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;  /* Makes sure the background covers the whole page */
+    color: white;   /* Optional: changes text color to white for better contrast */
 }
-
 /* Title styling */
 h1 {
     text-align: center;
