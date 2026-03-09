@@ -1,12 +1,7 @@
 import streamlit as st
+
 # ______________________________________________________________________________
 # Page Style
-
-# darkbrown: #654f41
-# lightbrown: #c29e8e
-# blueisch: #649999
-
-
 st.markdown("""
 <style>
 /* Background color */
@@ -23,8 +18,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-
-}
 /* Buttons */
 .stButton > button {
     background-color: #c29e8e;
@@ -122,14 +115,17 @@ div[role="alert"][aria-label="error"] {
 # _________________________________________________________________________________________________________
 # Header and Main Content Centering
 
+# Center everything (logo, title, buttons) in one column layout
 left, center, right = st.columns([1, 2, 1])
 
 with center:
+    # Logo
     st.image("https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png", use_column_width=True)
- 
     
+    # Add a small gap after the image to ensure proper alignment
     st.write("")  # add some vertical space
-    st.write("")
+    
+    # Title
     st.title("Agga Guru's")
 
     # Buttons
@@ -140,6 +136,7 @@ with center:
     if "login_clicked" not in st.session_state:
         st.session_state.login_clicked = False
 
+    # Spacing
     st.write("") 
 
     # Spel Opmerking Button
@@ -149,7 +146,7 @@ with center:
     if st.button("Naar Game Library", use_container_width=True):
         st.session_state.login_clicked = True
 
-    st.write("")  
+    st.write("")  # Additional spacing
 
     # Password input
     if st.session_state.login_clicked:
@@ -158,6 +155,6 @@ with center:
         if st.button("Login"):
             if password == CORRECT_PASSWORD:
                 st.success("Toegang toegestaan, klik hieronder om de Game Library te openen.")
-                st.link_button("Open Game Library", sheet_link_data, use_container_width=True)
+                st.link_button("Open Game Library", sheet_link_data)
             else:
                 st.error("Verkeerd wachtwoord")
