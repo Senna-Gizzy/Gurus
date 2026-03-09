@@ -1,5 +1,5 @@
 import streamlit as st
-
+# ______________________________________________________________________________
 # Page Style
 st.markdown("""
 <style>
@@ -114,17 +114,13 @@ div[role="alert"][aria-label="error"] {
 # _________________________________________________________________________________________________________
 # Header and Main Content Centering
 
-# Center everything (logo, title, buttons) in one column layout
 left, center, right = st.columns([1, 2, 1])
 
 with center:
-    # Logo
-    st.image("https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png", width=200)
+    st.image("https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png", width=100)
     
-    # Add a small gap after the image to ensure proper alignment
     st.write("")  # add some vertical space
-    
-    # Title
+    st.write("")
     st.title("Agga Guru's")
 
     # Buttons
@@ -135,7 +131,6 @@ with center:
     if "login_clicked" not in st.session_state:
         st.session_state.login_clicked = False
 
-    # Spacing
     st.write("") 
 
     # Spel Opmerking Button
@@ -145,7 +140,7 @@ with center:
     if st.button("Naar Game Library", use_container_width=True):
         st.session_state.login_clicked = True
 
-    st.write("")  # Additional spacing
+    st.write("")  
 
     # Password input
     if st.session_state.login_clicked:
