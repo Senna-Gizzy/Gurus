@@ -121,9 +121,9 @@ with col2:
 # _________________________________________________________________________________________________________
 # Main
 
-st.write("")
-st.write("")
-#st.title("Guru's Only")
+# st.write("")
+# st.write("")
+# #st.title("Guru's Only")
 
 CORRECT_PASSWORD = st.secrets["guru_password"]
 
@@ -138,8 +138,8 @@ left, center, right = st.columns([1,2,1])
 
 
 with center:
-
-    st.title("Guru's Only")
+    st.write("")
+    st.title("Guru's Only :)")
 
     st.link_button(
     "Spel Opmerking Toevoegen",
