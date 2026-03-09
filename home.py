@@ -121,13 +121,13 @@ div[role="alert"][aria-label="error"] {
 
 # _________________________________________________________________________________________________________
 # Header
-left, center, right = st.columns([1,2,1])
+# left, center, right = st.columns([1,2,1])
 
-with center:
-    st.image(
-        "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
-        width=200
-    )
+# with center:
+#     st.image(
+#         "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
+#         width=200
+#     )
     
 
 # _________________________________________________________________________________________________________
@@ -146,6 +146,9 @@ left, center, right = st.columns([1,2,1])
 
 
 with center:
+    st.image(
+    "https://www.spellenhuis.nl/media/8a/65/ae/1634638327/spellenhuislogo.png",
+    width=200)
     st.write("")
     st.title("Agga Guru's")
 
