@@ -10,7 +10,7 @@ st.markdown("""
 
 /* Title styling */
 h1 {
-    text-align: center;
+    text-align: right;
     color: white !important;
     font-weight: 700;
 }
@@ -82,7 +82,7 @@ if "login_clicked" not in st.session_state:
     st.session_state.login_clicked = False
 
 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col2:
     if st.button("Naar Game Library"):
