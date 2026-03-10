@@ -131,7 +131,7 @@ with center:
     st.write("")  # add some vertical space
     
     # Title
-    st.title("Agga Guru's")
+    st.title("Guru's Only")
 
     # Buttons
     CORRECT_PASSWORD = st.secrets["guru_password"]
